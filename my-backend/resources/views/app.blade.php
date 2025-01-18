@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My App</title>
+    <title>My new App</title>
     @viteReactRefresh
     @vite('src/index.tsx')
 </head>
 <body>
-    @inertia
+    <div id="app" data-page="{{ json_encode($page) }}"></div>
 </body>
 </html>
