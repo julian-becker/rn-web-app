@@ -1,13 +1,24 @@
-import React from 'react';
-import { AppRegistry } from 'react-native';
-import { name as appName } from './app.json';
-import App from './src/App';
+// import React from 'react';
+// import { AppRegistry } from 'react-native';
+// import { name as appName } from './app.json';
+// import App from './src/App';
 
-// Register the app for web
-AppRegistry.registerComponent(appName, () => App);
+// // Register the app for web
+// AppRegistry.registerComponent(appName, () => App);
 
-// Mount the app to the DOM
-AppRegistry.runApplication(appName, {
-  initialProps: {},
-  rootTag: document.getElementById('app-root'),
+// // Mount the app to the DOM
+// AppRegistry.runApplication(appName, {
+//   initialProps: {},
+//   rootTag: document.getElementById('app-root'),
+// });
+
+import { createInertiaApp } from '@inertiajs/inertia-react';
+import { render } from 'react-dom';
+
+createInertiaApp({
+    resolve: name => import(`./Pages/${name}`), // Adjust path as needed
+    setup({ el, App, props }) {
+        render(<App {...props} />, el);
+    },
 });
+
