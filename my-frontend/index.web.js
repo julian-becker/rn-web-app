@@ -16,7 +16,7 @@ import { createInertiaApp } from '@inertiajs/inertia-react';
 import { render } from 'react-dom';
 
 createInertiaApp({
-    resolve: name => import(`./Pages/${name}`), // Adjust path as needed
+    resolve: name => import(`./src/${name}`), // Adjust path as needed
     setup({ el, App, props }) {
         render(<App {...props} />, el);
     },

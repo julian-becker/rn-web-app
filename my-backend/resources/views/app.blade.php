@@ -3,7 +3,7 @@
 <head>
     <title>My App</title>
     @viteReactRefresh
-    @vite('resources/js/app.jsx')
+    @vite('src/index.tsx')
 </head>
 <body>
     @inertia

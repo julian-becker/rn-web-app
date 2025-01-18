@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 use Inertia\Inertia;
 
-Route::get('/my-app/{path}', function ($path) {
-    return response()->file(public_path('my-app/' . $path));
+Route::get('/my-frontend/{path}', function ($path) {
+    return response()->file(public_path('my-frontend/' . $path));
 })->where('path', '.*');
 
 Route::get('/', function () {
